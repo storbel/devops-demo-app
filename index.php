@@ -80,7 +80,22 @@ $conn->close(); ?>
                         else {echo '<span class="label label-danger">Failed to load version data';}
                         ?></span></h3>
             </div>
+            <div>
+                <?php
+$dir = "/files/";
 
+
+// Sort in descending order
+$folder= scandir($dir,1);
+
+print_r($folder);
+           echo "<table><th>File name</th>";     
+                foreach ($folder as &$file) {
+    echo "<tr><td>".$value."</td></tr>";
+}
+                echo "</table>";
+?>
+            </div>
             <div class="mastfoot">
                 <div class="inner">
                     <p>DevOps Demo application provided by the <a href="https://www.devopslibrary.com/">DevOps Library</a>.</p>
