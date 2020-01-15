@@ -35,9 +35,13 @@ $dbVersion = false;
     <![endif]-->
     
  <style>
-body {background-color: powderblue;}
-    div {
+body {
+    
+    background-color: powderblue;
+    
   background-image: url("http://thierrybouillet.com/wp-content/uploads/2018/11/plan-metro-ratp-handicap.jpg");
+    font-family:verdana;
+    color:black;
 }
     </style>
     
@@ -90,10 +94,10 @@ if (isset($_POST['type_ligne']) && $_POST['type_ligne']!="") {
     </tr>
   </thead>
   <tbody>';
-    foreach($result->result->$type_ligne as $mydata)
+    foreach($result->result as $mydata)
     {
         
-         foreach($mydata->values as $line)
+         foreach($mydata->$type_ligne as $line)
          {
               
               echo "<tr></td><td>$line->code</td>";
@@ -106,7 +110,7 @@ if (isset($_POST['type_ligne']) && $_POST['type_ligne']!="") {
                     
  echo "</table>";
     
-    print_r($response);
+    print_r($response->result->$type_ligne);
 }
     ?>            
 
