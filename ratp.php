@@ -97,7 +97,7 @@ if (isset($_POST['type_ligne']) && $_POST['type_ligne']!="") {
     foreach($result->result as $mydata)
     {
         
-         foreach($mydata->$type_ligne as $line)
+         foreach($mydata->noctiliens as $line)
          {
               
               echo "<tr></td><td>$line->code</td>";
@@ -110,7 +110,7 @@ if (isset($_POST['type_ligne']) && $_POST['type_ligne']!="") {
                     
  echo "</table>";
     
-    print_r($response->result->$type_ligne);
+    print_r($response->result->noctiliens);
 }
     ?>            
 
