@@ -72,7 +72,7 @@ body {background-color: powderblue;}
                 
     <?php
 if (isset($_POST['type_ligne']) && $_POST['type_ligne']!="") {
- type_ligne = $_POST['type_ligne'];
+ $type_ligne = $_POST['type_ligne'];
  $url = "https://api-ratp.pierre-grimaud.fr/v4/lines/".$type_ligne;
  
  $client = curl_init($url);
