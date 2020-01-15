@@ -82,19 +82,24 @@ $conn->close(); ?>
             </div>
             <div>
                 <?php
-$dir = "/files/";
+                            $dir = "/files/";
 
 
-// Sort in descending order
-$folder= scandir($dir,1);
-
-print_r($folder);
-           echo "<table><th>File name</th>";     
-                foreach ($folder as &$file) {
-    echo "<tr><td>".$value."</td></tr>";
-}
-                echo "</table>";
-?>
+                            // Sort in descending order
+                            $folder= scandir($dir,1);
+                            echo '
+                            <div class="alert alert-info" role="alert">
+                              File listing of /files/
+                            </div>';
+                                       echo '<table class="table">
+                                                <thead class="thead-light">
+                                                     <tr><th>File name</th></tr>
+                                                 </thead>';     
+                                            foreach ($folder as &$file) {
+                                                echo "<tr><td>".$value."</td></tr>";
+                                            }
+                                            echo "</table>";
+                ?>
             </div>
             <div class="mastfoot">
                 <div class="inner">
