@@ -81,7 +81,7 @@ if (isset($_POST['type_ligne']) && $_POST['type_ligne']!="") {
  
  $result = json_decode($response);
  
- echo " <table class="table"><thead class="thead-light">
+ echo '<table class="table"><thead class="thead-light">
     <tr>
       <th scope="col">Code</th>
       <th scope="col">Name</th>
@@ -89,7 +89,7 @@ if (isset($_POST['type_ligne']) && $_POST['type_ligne']!="") {
       <th scope="col">Id</th>
     </tr>
   </thead>
-  <tbody>";
+  <tbody>';
     foreach($result->$type_ligne as $mydata)
 
     {
