@@ -37,7 +37,7 @@ $dbVersion = false;
  <style>
 body {background-color: powderblue;}
     div {
-  background-image: url("https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png");
+  background-image: url("http://thierrybouillet.com/wp-content/uploads/2018/11/plan-metro-ratp-handicap.jpg");
 }
     </style>
     
@@ -81,11 +81,29 @@ if (isset($_POST['type_ligne']) && $_POST['type_ligne']!="") {
  
  $result = json_decode($response);
  
- echo "<table>";
- echo "<tr><td>Code:</td><td>$result->code</td></tr>";
- echo "<tr><td>Name:</td><td>$result->name</td></tr>";
- echo "<tr><td>Directions:</td><td>$result->directions</td></tr>";
- echo "<tr><td>Id:</td><td>$result->id</td></tr>";
+ echo " <table class="table"><thead class="thead-light">
+    <tr>
+      <th scope="col">Code</th>
+      <th scope="col">Name</th>
+      <th scope="col">Directions</th>
+      <th scope="col">Id</th>
+    </tr>
+  </thead>
+  <tbody>";
+    foreach($result->$type_ligne as $mydata)
+
+    {
+         echo $mydata->name . "\n";
+         foreach($mydata->values as $line)
+         {
+              
+              echo "<tr></td><td>$line->code</td>";
+                echo "<td>$line->name</td>";
+                echo "<td>$line->directions</td>";
+                 echo "<td>$line->id</td></tr>";
+         }
+    }  
+
                     
  echo "</table>";
     
