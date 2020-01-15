@@ -39,7 +39,7 @@ body {
     
     background-color: powderblue;
     
-  background-image: url("http://thierrybouillet.com/wp-content/uploads/2018/11/plan-metro-ratp-handicap.jpg");
+  background-image: url("https://wiki.openstreetmap.org/w/images/1/1b/Mapnik_tutorial_010-background.png");
     font-family:verdana;
     color:black;
 }
@@ -96,21 +96,21 @@ if (isset($_POST['type_ligne']) && $_POST['type_ligne']!="") {
   <tbody>';
     foreach($result->result as $mydata)
     {
-        
-         foreach($mydata->noctiliens as $line)
+        print_r($response->result);
+    /*     foreach($mydata->noctiliens as $line)
          {
               
               echo "<tr></td><td>$line->code</td>";
                 echo "<td>$line->name</td>";
                 echo "<td>$line->directions</td>";
                  echo "<td>$line->id</td></tr>";
-         }
+         } */
     }  
 
                     
  echo "</table>";
     
-    print_r($response->result->noctiliens);
+    
 }
     ?>            
 
