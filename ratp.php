@@ -94,17 +94,21 @@ if (isset($_POST['type_ligne']) && $_POST['type_ligne']!="") {
     </tr>
   </thead>
   <tbody>';
-    foreach($result->result as $mydata)
+    
+   
+    foreach($result->result as $key => $value)
     {
-        print_r($response->result);
-    /*     foreach($mydata->noctiliens as $line)
+        print_r($key);
+        print_r($value);
+        
+         foreach($value->noctiliens as $line)
          {
               
               echo "<tr></td><td>$line->code</td>";
                 echo "<td>$line->name</td>";
                 echo "<td>$line->directions</td>";
                  echo "<td>$line->id</td></tr>";
-         } */
+         } 
     }  
 
                     
