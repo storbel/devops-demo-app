@@ -96,10 +96,10 @@ if (isset($_POST['type_ligne']) && $_POST['type_ligne']!="") {
   <tbody>';
     
    
-    foreach($result->result as $key => $value)
+    foreach($result->result as $key => $values)
     {
-        print_r($key);
-        print_r($value);
+        //print_r($key);
+        //print_r($values);
         
          foreach($values as $line)
          {
