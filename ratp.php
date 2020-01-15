@@ -37,7 +37,7 @@ $dbVersion = false;
  <style>
 body {background-color: powderblue;}
     div {
-  background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+  background-image: url("https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png");
 }
     </style>
     
@@ -88,6 +88,8 @@ if (isset($_POST['type_ligne']) && $_POST['type_ligne']!="") {
  echo "<tr><td>Id:</td><td>$result->id</td></tr>";
                     
  echo "</table>";
+    
+    print_r($response);
 }
     ?>            
 
