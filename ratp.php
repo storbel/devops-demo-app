@@ -101,7 +101,7 @@ if (isset($_POST['type_ligne']) && $_POST['type_ligne']!="") {
         print_r($key);
         print_r($value);
         
-         foreach($value->noctiliens as $line)
+         foreach($values as $line)
          {
               
               echo "<tr></td><td>$line->code</td>";
