@@ -90,10 +90,9 @@ if (isset($_POST['type_ligne']) && $_POST['type_ligne']!="") {
     </tr>
   </thead>
   <tbody>';
-    foreach($result->$type_ligne as $mydata)
-
+    foreach($result->result->$type_ligne as $mydata)
     {
-         echo $mydata->name . "\n";
+        
          foreach($mydata->values as $line)
          {
               
